@@ -8,7 +8,7 @@ Experimental application to automate torch machine learning jobs using a redis q
 
 Contains the following actions,
 
-- Convert csv to H5 format and load as data into a torch tensor.
+- Convert csv to H5 format and load data into a torch tensor.
 - Load data from t7 format
 - Pre-process data (normalize, shuffle, split into train & test)
 - Create a Neural Network Regression model
