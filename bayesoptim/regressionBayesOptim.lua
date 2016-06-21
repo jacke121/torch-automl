@@ -91,10 +91,6 @@ local regression_objective = function(X)
 
     isBayesOpt = true
     mljob = r:train(mljob,isBayesOpt)
-    -- print(mljob.train.avgLoss)
-
-    -- return mljob.train.avgLoss
-    -- return _.last(mljob.train.trainLosses,1)[1]
 
    last10avg = (_.reduce(_.last(mljob.train.trainLosses,10),function(memo,v)
                     return memo+v
@@ -102,8 +98,6 @@ local regression_objective = function(X)
 
   return last10avg
 
-  -- min train loss will not be reliable if batch size is small. 
-  -- return _.min(mljob.train.trainLosses)
 end
 
 function regressionBayesOptim:run(mljob)

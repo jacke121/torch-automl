@@ -13,12 +13,10 @@ end
 function worker:doNext(mljob)
 
 	log.info("running job " .. mljob.modelName)
-	-- 1. Determine job type - BO, train, predict
-	-- 2. Based on job type initiate corresponding component. 
 
 	p = pipeline{ mljob = mljob }
-	
-	p:run()	
+	p:run()
+    
 end
 
 return worker
