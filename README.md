@@ -72,12 +72,12 @@ runs bayesian optimzation, trains a model and makes predictions on the test data
 
 ## Creating a new regression job. 
 To queue a new job create a job object similar to tests/queue_train_jobs.lua and push it to the redis queue.   
-The input file csv needs to be placed in the input folder of this project.
+The input file csv (training data) needs to be placed in the input folder of this project.
 ```
   local mljob1 = job{
-    modelName = 'boston-housing',
-    inputFile = 'boston.csv',
-    targetColumn = 'medv',
+    modelName = 'new-regression-task',
+    inputFile = 'train-data.csv',
+    targetColumn = 'target',
     bayesOptEnabled = true,
     budget = 100,
     loadTrainedModelAndProcessedData = false,
