@@ -54,7 +54,7 @@ Tested on Mac OS X only.
   git clone https://github.com/ronanmoynihan/torch-pipeline    
 ```
 
-## Start Application
+## Demo
 
 - Start Redis Server in a new terminal window
 ```
@@ -62,7 +62,9 @@ Tested on Mac OS X only.
     src/redis-server
 ```        
 
-- Run Regression test in a new terminal window
+- Run Regression test in a new terminal window  
+This will queue a new job which takes the boston housing data set as input, pre-processes the data,  
+runs bayesian optimzation, trains a model and makes predictions on the test data set.
 ```
     cd [path to torch-pipeline folder]
     th tests/queue_train_jobs.lua
