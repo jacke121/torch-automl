@@ -1,5 +1,7 @@
 # Torch-Pipeline
-Experimental application to automate torch machine learning jobs using a redis queue. 
+Experimental application to automate all aspects of a machine learning task.  
+Data pre-processing, Bayesian Optimization of Hyperparameters, Training, Predicting.  
+
 - Jobs are pushed to a redis queue as json.
 - Torch dispatcher polls redis to dequeue and run jobs.
 - The number of jobs that can run in parallel can be set in the configuration.
